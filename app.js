@@ -9,7 +9,11 @@ app.use(cors({
   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 
-app.get('/',cors(), async(req, res) => {
+app.get('/', async(req, res) => {
+  res.status(200).send('Hello!')
+})
+
+app.get('/project',cors(), async(req, res) => {
   const data = await axios.get('http://www.cc.puv.fi/~asa/json/project.json')
   console.log(data.data)
   res.status(200).send(data.data)
