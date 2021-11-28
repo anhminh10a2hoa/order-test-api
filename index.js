@@ -2,6 +2,7 @@ var express = require('express')
 var axios = require('axios');
 var cors = require('cors');
 var app = express();
+let port = process.env.PORT || 3000
 
 app.use(cors({
   origin: 'http://localhost:5500',
@@ -19,4 +20,6 @@ app.get('/project',cors(), async(req, res) => {
   res.status(200).send(data.data)
 })
 
-app.listen(3000);
+app.listen(port, () => {
+  console.log('server is running on port: ' + port)
+});
