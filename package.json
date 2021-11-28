@@ -1,0 +1,16 @@
+{
+  "name": "node-tutorial",
+  "version": "1.0.0",
+  "description": "Node Js Tutorial",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Daily Code Buffer",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
