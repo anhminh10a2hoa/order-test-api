@@ -42,6 +42,7 @@ router.route('/orders')
     order.respsalesperson = req.body.respsalesperson;
     order.comment = req.body.comment;
     order.total = req.body.total;
+    order.status = req.body.status;
     order.products = req.body.products;
 
     order.save(function(err) {
@@ -80,6 +81,7 @@ router.route('/orders/:orderId')
       order.respsalesperson = req.body.respsalesperson;
       order.comment = req.body.comment;
       order.total = req.body.total;
+      order.status = req.body.status;
       order.products = req.body.products;
       // save the bear
       order.save(function(err) {
