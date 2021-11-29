@@ -56,6 +56,7 @@ var OrderSchema  = new Schema({
     required: [true, 'Respsales person must not be empty.']
   },
   status: {
+    type: Number,
     validate: {
       validator: function(val) {
         // this only points to current doc on NEW document creation
