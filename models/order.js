@@ -4,11 +4,11 @@ var Schema       = mongoose.Schema;
 var ProductSchema  = new Schema({
   code: {
     type: String,
-    required: [false]
+    required: [true, 'Product code must not be empty.']
   },
   product: {
     type: String,
-    required: [false]
+    required: [true, 'Product name must not be empty.']
   },
   description: {
     type: String,
@@ -16,32 +16,32 @@ var ProductSchema  = new Schema({
   },
   suppliercode: {
     type: String,
-    required: [false]
+    required: [true, 'Supplier code must not be empty.']
   },
   qty: Number,
   unit_price: Number,
   shelf_pos: {
     type: String,
-    required: [false]
+    required: [true, 'Shelf pos must not be empty.']
   },
 });
 
 var OrderSchema  = new Schema({
   orderid: {
     type: String,
-    required: [false]
+    required: [true, 'Order id must not be empty.']
   },
   customerid: {
     type: String,
-    required: [false]
+    required: [true, 'Customer id must not be empty.']
   },
   customer: {
     type: String,
-    required: [false]
+    required: [true, 'Customer must not be empty.']
   },
   invaddr: {
     type: String,
-    required: [false]
+    required: [true, 'Inva address must not be empty.']
   },
   delivaddr: {
     type: String,
@@ -53,7 +53,7 @@ var OrderSchema  = new Schema({
   },
   respsalesperson: {
     type: String,
-    required: [false]
+    required: [true, 'Respsales person must not be empty.']
   },
   comment: String,
   totalprice: Number,
