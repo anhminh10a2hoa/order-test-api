@@ -12,7 +12,7 @@ async function getData(url) {
 
 async function addDataToMongo() {
   const data = await getData('https://node-api-deploy-vamkk.herokuapp.com/project')
-  let i = 0;
+  let i = 4;
 
   let newData = data[i]
   newData.totalprice = data[i].totalprice * 1
