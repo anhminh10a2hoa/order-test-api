@@ -55,6 +55,16 @@ var OrderSchema  = new Schema({
     type: String,
     required: [true, 'Respsales person must not be empty.']
   },
+  status: {
+    validate: {
+      validator: function(val) {
+        // this only points to current doc on NEW document creation
+        return val < 4 && val >= 0 && Number.isInteger(val);
+      },
+      message: 'Status must be an integer between 0 and 3'
+    },
+    default: 0
+  },
   comment: String,
   totalprice: Number,
   products: [ProductSchema],
