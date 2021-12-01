@@ -41,7 +41,7 @@ router.route('/orders')
     order.deliverydate = req.body.deliverydate;
     order.respsalesperson = req.body.respsalesperson;
     order.comment = req.body.comment;
-    order.total = req.body.total;
+    order.totalprice = req.body.totalprice;
     order.status = req.body.status;
     order.products = req.body.products;
 
@@ -80,7 +80,7 @@ router.route('/orders/:orderId')
       order.deliverydate = req.body.deliverydate;
       order.respsalesperson = req.body.respsalesperson;
       order.comment = req.body.comment;
-      order.total = req.body.total;
+      order.totalprice = req.body.totalprice;
       order.status = req.body.status;
       order.products = req.body.products;
       // save the bear

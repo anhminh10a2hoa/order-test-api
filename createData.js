@@ -16,6 +16,7 @@ async function addDataToMongo() {
   while(i < data.length) {
     let newData = data[i]
     newData.totalprice = data[i].totalprice * 1
+    newData.status = Math.floor(Math.random() * 4)
     for(let j = 0; j < data[i].products.length; j++) {
       newData.products[j].qty = data[i].products[j].qty * 1
       newData.products[j].unit_price = data[i].products[j].unit_price * 1
